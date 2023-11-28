@@ -28,4 +28,5 @@ Recall: Indicates the ratio of correctly predicted instances among actual positi
 ## Conclusion
 The logistic regression models were evaluated based on their accuracy, precision, and recall. Model 2, trained with balanced data, demonstrated improved performance, especially in reducing false positives, which is crucial for minimizing risks associated with misclassifying non-healthy loans as healthy.
 
-## Recommendation: Considering the company's objective to minimize false positives and accurately identify non-healthy loans, Model 2 trained with balanced data is recommended for deployment due to its superior performance in addressing this critical concern.
+## Recommendation: 
+Considering the company's objective to minimize false positives and accurately identify non-healthy loans, Model 2 trained with balanced data is recommended for deployment due to its superior performance in addressing this critical concern.
