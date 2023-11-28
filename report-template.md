@@ -2,30 +2,22 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+The analysis aimed to leverage machine learning models to assess the creditworthiness of borrowers based on historical lending data from a peer-to-peer lending platform. The objective was to predict the loan status, distinguishing between healthy (low-risk) and non-healthy (high-risk) loans. The dataset featured a significant class imbalance, with a majority of entries categorized as healthy loans.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The machine learning process involved stages such as data preprocessing, model training (including Logistic Regression), and addressing the imbalance using RandomOverSampler from the imbalanced-learn library.
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
 
-
+Achieved an accuracy score of 99%, with precision scores of 100% for healthy loans and 85% for non-healthy loans. It exhibited a recall of 99% for healthy loans and 91% for non-healthy loans.
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+
+Attained a 99% accuracy score. Notably, the oversampled data model significantly reduced false negatives, improving the prediction of non-healthy loans. Precision scores remained similar to Model 1, with a recall improvement for non-healthy loans.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+The model trained with balanced data (Model 2) outperformed the one trained with imbalanced data (Model 1). Model 2 showcased fewer false positives and enhanced accuracy in categorizing healthy and non-healthy loans.
 
-If you do not recommend any of the models, please justify your reasoning.
+Considering the lending company's preferences, minimizing false positives (misclassifying non-healthy loans as healthy) is crucial. Model 2's reduction in false positives and improvements in accuracy for both loan types make it a recommended choice for minimizing potential financial losses and misclassifications in loan assessments. The selection of the model might depend on the significance of correctly predicting healthy and non-healthy loans, and Model 2's ability to reduce false positives might be more beneficial in this context.
